@@ -23,8 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F49AB8B250F2C560086AEDE /* bitacora.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitacora.txt; sourceTree = "<group>"; };
-		2F49AB8C250F2CFD0086AEDE /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		2F49AB8D250F37670086AEDE /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+		2F49AB8E250F37670086AEDE /* bitacora.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitacora.txt; sourceTree = "<group>"; };
 		2FCE3A1A250936750022BB9C /* Act1.3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Act1.3; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCE3A1D250936750022BB9C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,8 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				2FCE3A1D250936750022BB9C /* main.cpp */,
-				2F49AB8B250F2C560086AEDE /* bitacora.txt */,
-				2F49AB8C250F2CFD0086AEDE /* output.txt */,
+				2F49AB8E250F37670086AEDE /* bitacora.txt */,
+				2F49AB8D250F37670086AEDE /* output.txt */,
 			);
 			path = Act1.3;
 			sourceTree = "<group>";

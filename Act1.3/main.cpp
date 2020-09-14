@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//hola
 
 struct Dato {
   int fecha_hora;
