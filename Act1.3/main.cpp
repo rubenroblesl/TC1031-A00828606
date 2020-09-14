@@ -7,8 +7,6 @@
 
 using namespace std;
 
-//hola
-
 struct Dato {
   int fecha_hora;
   string ip;
@@ -382,9 +380,9 @@ int main() {
     if (posI == -1 || posF == -1){
       cout << "No entries found within the range." << endl;
     }
-    //si sí se encontraron datos, los imprime
+    //it will return -1 if there's nothing found
     else{
-      //imprime los datos que entran en el rango de las fechas solicitadas
+      //print every position from the search range
       for (int i=posI; i<=posF; i++){
         cout << datos[i].imprimir() << endl;
       }
