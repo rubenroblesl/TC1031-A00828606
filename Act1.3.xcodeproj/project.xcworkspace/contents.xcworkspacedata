@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "absolute:../../../../Library/Developer/Xcode/DerivedData/Act1.3-bdenagruwruphchcufhdmoywomlj/Build/Products/Debug/bitacora.txt">
+   </FileRef>
+   <FileRef
+      location = "self:Act1.3.xcodeproj">
+   </FileRef>
+</Workspace>
