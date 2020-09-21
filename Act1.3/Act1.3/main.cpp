@@ -360,15 +360,18 @@ int main() {
         if (pass ==1){
             cout << "\nThe following values: \n"<< reason << "\n\nAre incorrect. Please try again.\n\n";
         }
-        valuemin = start_month + start_day + start_hr + start_min + "00";
-        valuemax = end_month + end_day + end_hr + end_min + "00";
-        
-        valmin = stoi(valuemin);
-        valmax = stoi(valuemax);
-        if (valuemax < valuemin){
-            cout << "End search range cannot be greater than start search range. Please try again.\n";
-            pass = 1;
+        if (pass == 0){
+            valuemin = start_month + start_day + start_hr + start_min + "00";
+            valuemax = end_month + end_day + end_hr + end_min + "00";
+            
+            valmin = stoi(valuemin);
+            valmax = stoi(valuemax);
+            if (valuemax < valuemin){
+                cout << "End search range cannot be greater than start search range. Please try again.\n";
+                pass = 1;
+            }
         }
+
     }
         
     
