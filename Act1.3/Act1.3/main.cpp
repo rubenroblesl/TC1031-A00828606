@@ -159,8 +159,7 @@ int busquedaBinaria (vector<Dato> &lista, int fecha_horaB, bool inicio){
         sup = mid - 1;
       }
     }
-  }
-  return -1;
+  } return -1;
 }
 
 
@@ -224,6 +223,7 @@ int main() {
     //lee el dia
     pos = (int)dataRead[i].find(" ");
     string dia = dataRead[i].substr(0,pos);
+      
     dataRead[i].erase(0,pos + 1);
     int day = std::stoi(dia);
     //rellena los dias menores a 10 con un 0: 5 = 05
@@ -235,6 +235,7 @@ int main() {
     //lee la hora
     pos = (int)dataRead[i].find(":");
     string hora = dataRead[i].substr(0,pos);
+      cout << dataRead[i];
     dataRead[i].erase(0,pos + 1);
     //lee los minutos
     pos = (int)dataRead[i].find(":");
