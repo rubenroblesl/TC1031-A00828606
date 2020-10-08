@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2FC3C37F252E2A2B00D24728 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		2FD25D2C252CEE51005DD149 /* Actividad 2.3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Actividad 2.3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD25D2F252CEE51005DD149 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2FD25D37252CF338005DD149 /* bitacora.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitacora.txt; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 			children = (
 				2FD25D2F252CEE51005DD149 /* main.cpp */,
 				2FD25D39252CF3EC005DD149 /* DoublyLinkedList.h */,
+				2FC3C37F252E2A2B00D24728 /* Queue.h */,
 				2FD25D3A252CF403005DD149 /* Node.h */,
 				2FD25D37252CF338005DD149 /* bitacora.txt */,
 			);

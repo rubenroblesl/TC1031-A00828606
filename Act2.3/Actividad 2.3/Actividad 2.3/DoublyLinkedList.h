@@ -9,8 +9,7 @@
 #define DoublyLinkedList_h
 
 #include "Node.h"
-//#include "Queue.h"
-
+#include "Queue.h"
 
 template<class T>
 class DoublyLinkedList {
@@ -222,17 +221,17 @@ void DoublyLinkedList<T>::mergeSort(int st, int ed) {
 
 template <class T>
 void DoublyLinkedList<T>::merge(int st,int mid, int ed) {
-  DoublyLinkedList<T> listaL;
-  DoublyLinkedList<T> listaR;
+  Queue<T> listaL;
+  Queue<T> listaR;
   int i, j;
   int pos = st;
   int s1 = mid - st + 1;
   int s2 = ed-mid;
   for(i=0; i< s1; i++){
-    listaL.addLast(getData(st+i));
+    listaL.enqueue(getData(st+i));
   }
   for(j=0; j < s2; j++){
-    listaR.addLast(getData(mid+1+j));
+    listaR.enqueue(getData(mid+1+j));
   }
   i=0;
   j=0;

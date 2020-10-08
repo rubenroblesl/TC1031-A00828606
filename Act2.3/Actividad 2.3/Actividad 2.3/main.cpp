@@ -151,6 +151,8 @@ int main() {
     }
     
     fin.close();
+    cout << "Done! " << endl;
+    cout << "Creating Doubly Linked List... ";
     
     //crear dll de OBJETOS tipo DATO
     DoublyLinkedList<Dato> datos;
@@ -245,7 +247,8 @@ int main() {
     //sort(datos,0,datos.getSize()-1);
     datos.sort();
     
-    cout << "Done!"<< endl << endl;
+    cout << "Done! " << endl;
+    cout << "Saving sorted database in a file... ";
     //almacena el vector ordenado en un archivo nuevo
     ofstream outdata ("output.txt");
     for (int i=0;i<datos.getSize();i++){
@@ -253,9 +256,9 @@ int main() {
 
     }
     outdata.close();
-    
+    cout << "Done! Sorted database was saved in 'output.txt'" << endl << endl;
     string start_month, start_day, start_hr, start_min, start_sec, end_month, end_day, end_hr, end_min, end_sec, reason;
-      int aux, valmin, valmax;
+      int aux, valmin, valmax, length;
       string valuemin, valuemax;
       
       bool pass = 1;
@@ -264,21 +267,16 @@ int main() {
           cout << "Search entries from a range. Please enter values as numbers.\n\nSearch range starts from:\n\nMonth: ";
           // --- START MONTH ---
           cin >> start_month;
-          try{
-              aux = stoi(start_month);
-          }
-          catch (...) {
-              pass = 1;
-              reason = reason + "\nStart month";
-          }
+          
+          aux = stoi(start_month);
+          
           if (aux < 1 || aux > 12){
               pass = 1;
               reason = reason + "\nStart month";
           }
-          if (aux < 10){
+          if (aux < 10 ){
               start_month = "0" + to_string(aux);
           }
-          
           // --- START DAY ---
           cout << "Day: ";
           cin >> start_day;
@@ -290,7 +288,6 @@ int main() {
           if (aux < 10){
               start_day = "0" + to_string(aux);
           }
-          
           // --- START HOUR ---
           cout << "\nEnter time in 24 hour format:\n";
           cout << "Hour: ";
@@ -300,7 +297,10 @@ int main() {
               pass = 1;
               reason = reason + "\nStart Hour";
           }
-          if (aux < 10){
+          if (aux == 0){
+              start_hr = "00";
+          }
+          else if (aux < 10 ){
               start_hr = "0" + to_string(aux);
           }
           
@@ -311,9 +311,11 @@ int main() {
           if (aux < 0 || aux > 59){
               pass = 1;
               reason = reason + "\nStart Min";
-
           }
-          if (aux < 10){
+          if (aux == 0){
+              start_min = "00";
+          }
+          else if (aux < 10){
               start_min = "0" + to_string(aux);
           }
           
@@ -345,7 +347,10 @@ int main() {
               pass = 1;
               reason = reason + "\nEnd Hour";
           }
-          if (aux < 10){
+          if (aux == 0){
+              end_hr = "00";
+          }
+          else if (aux < 10){
               end_hr = "0" + to_string(aux);
           }
           cout << "Min: ";
@@ -355,7 +360,10 @@ int main() {
               pass = 1;
               reason = reason + "\nEnd Min";
           }
-          if (aux < 10){
+          if (aux == 0){
+              end_min = "00";
+          }
+          else if (aux < 10){
               end_min = "0" + end_min;
           }
           if (pass ==1){
@@ -376,8 +384,8 @@ int main() {
       }
           
       
-      cout << "\nSearching entries from " << start_month << "/" << start_day << " at " << start_hr << ":" << start_min << " to " << end_month << "/" << end_day << " at " << end_hr << ":" << end_min << "...\n" << endl;
-      //sleep(3);
+      cout << "\nSearching entries from " << start_month << "/" << start_day << " at " << start_hr << ":" << start_min << " to " << end_month << "/" << end_day << " at " << end_hr << ":" << end_min << "...\n\n";
+    sleep(3);
       int posI = busquedaBinaria(datos,valmin,true);
       int posF = busquedaBinaria(datos,valmax,false);
 
@@ -392,11 +400,5 @@ int main() {
         }
       }
 
-
-
     return 0;
-
-    
-    
-    
 }

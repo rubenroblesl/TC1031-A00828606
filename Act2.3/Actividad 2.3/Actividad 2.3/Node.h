@@ -33,7 +33,4 @@ Node<T>::Node(T data, Node<T>* next, Node<T> *prev){
 }
 
 
-
-
-
 #endif /* Node_h */
